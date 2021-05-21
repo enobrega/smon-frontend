@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMon [Links]</title>
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/axios.min.js"></script>
+    <script src="js/chart.js"></script>
+  </head>
+
+  <body onload="start()">
+    <header>
+      <span class="sistema"
+        ><img
+          src="assets/smon-icon.png"
+          alt="icon"
+          width="20"
+          height="20"
+        /><span>&nbsp;SMon</span></span
+      >
+      <h1>LINKS &nbsp;&nbsp;&nbsp;&nbsp; INTERNET</h1>
+      <span style="width: 100px; text-align: right"
+        ><img src="assets/globo.png" width="40" class="logo" alt="globo"
+      /></span>
+    </header>
+    <div id="container">
+      <div class="link">
+        <canvas id="canvas1"></canvas>
+        <div class="stats">
+          <table class="tbStatus">
+            <tr>
+              <td id="status1" colspan="2">-</td>
+            </tr>
+          </table>
+          <div id="lnkData">
+            <table class="tbStats">
+              <tr>
+                <td>Latência</td>
+                <td id="latencia1">-</td>
+              </tr>
+              <tr>
+                <td>Jitter</td>
+                <td id="jitter1">-</td>
+              </tr>
+              <tr>
+                <td>Packet loss</td>
+                <td id="loss1">-</td>
+              </tr>
+              <tr>
+                <td>Packets Sent</td>
+                <td id="sent1">-</td>
+              </tr>
+              <tr>
+                <td>Packets Received</td>
+                <td id="received1">-</td>
+              </tr>
+              <tr>
+                <td>Sessions</td>
+                <td id="sessions1">-</td>
+              </tr>
+              <tr>
+                <td>State Changed</td>
+                <td id="state1">-</td>
+              </tr>
+            </table>
+            <table class="tbBand">
+              <tr>
+                <td>Outbound</td>
+                <td id="bandtx1">-</td>
+              </tr>
+              <tr>
+                <td>Inbound</td>
+                <td id="bandrx1">-</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="link">
+        <canvas id="canvas2"></canvas>
+        <div class="stats">
+          <table class="tbStatus">
+            <tr>
+              <td id="status2" colspan="2">-</td>
+            </tr>
+          </table>
+          <div id="lnkData">
+            <table class="tbStats">
+              <tr>
+                <td>Latência</td>
+                <td id="latencia2">-</td>
+              </tr>
+              <tr>
+                <td>Jitter</td>
+                <td id="jitter2">-</td>
+              </tr>
+              <tr>
+                <td>Packet loss</td>
+                <td id="loss2">-</td>
+              </tr>
+              <tr>
+                <td>Packets Sent</td>
+                <td id="sent2">-</td>
+              </tr>
+              <tr>
+                <td>Packets Received</td>
+                <td id="received2">-</td>
+              </tr>
+              <tr>
+                <td>Sessions</td>
+                <td id="sessions2">-</td>
+              </tr>
+              <tr>
+                <td>State Changed</td>
+                <td id="state2">-</td>
+              </tr>
+            </table>
+            <table class="tbBand">
+              <tr>
+                <td>Outbound</td>
+                <td id="bandtx2">-</td>
+              </tr>
+              <tr>
+                <td>Inbound</td>
+                <td id="bandrx2">-</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="link">
+        <canvas id="canvas3"></canvas>
+        <div class="stats">
+          <table class="tbStatus">
+            <tr>
+              <td id="status3" colspan="2">-</td>
+            </tr>
+          </table>
+          <div id="lnkData">
+            <table class="tbStats">
+              <tr>
+                <td>Latência</td>
+                <td id="latencia3">-</td>
+              </tr>
+              <tr>
+                <td>Jitter</td>
+                <td id="jitter3">-</td>
+              </tr>
+              <tr>
+                <td>Packet loss</td>
+                <td id="loss3">-</td>
+              </tr>
+              <tr>
+                <td>Packets Sent</td>
+                <td id="sent3">-</td>
+              </tr>
+              <tr>
+                <td>Packets Received</td>
+                <td id="received3">-</td>
+              </tr>
+              <tr>
+                <td>Sessions</td>
+                <td id="sessions3">-</td>
+              </tr>
+              <tr>
+                <td>State Changed</td>
+                <td id="state3">-</td>
+              </tr>
+            </table>
+            <table class="tbBand">
+              <tr>
+                <td>Outbound</td>
+                <td id="bandtx3">-</td>
+              </tr>
+              <tr>
+                <td>Inbound</td>
+                <td id="bandrx3">-</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="link">
+        <canvas id="canvas4"></canvas>
+        <div class="stats">
+          <table class="tbStatus">
+            <tr>
+              <td id="status4" colspan="2">-</td>
+            </tr>
+          </table>
+          <div id="lnkData">
+            <table class="tbStats">
+              <tr>
+                <td>Latência</td>
+                <td id="latencia4">-</td>
+              </tr>
+              <tr>
+                <td>Jitter</td>
+                <td id="jitter4">-</td>
+              </tr>
+              <tr>
+                <td>Packet loss</td>
+                <td id="loss4">-</td>
+              </tr>
+              <tr>
+                <td>Packets Sent</td>
+                <td id="sent4">-</td>
+              </tr>
+              <tr>
+                <td>Packets Received</td>
+                <td id="received4">-</td>
+              </tr>
+              <tr>
+                <td>Sessions</td>
+                <td id="sessions4">-</td>
+              </tr>
+              <tr>
+                <td>State Changed</td>
+                <td id="state4">-</td>
+              </tr>
+            </table>
+            <table class="tbBand">
+              <tr>
+                <td>Outbound</td>
+                <td id="bandtx4">-</td>
+              </tr>
+              <tr>
+                <td>Inbound</td>
+                <td id="bandrx4">-</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br />
+    <span
+      style="
+        font-family: 'nunito';
+        text-align: center;
+        margin: 0 auto;
+        font-size: 16px;
+        color: #fff;
+      "
+      >by Suporte Soluções de Mídia Recife</span
+    >
+
+    <script src="js/links.js"></script>
+  </body>
+</html>
