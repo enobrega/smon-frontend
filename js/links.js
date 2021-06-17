@@ -451,7 +451,7 @@ function getStatus() {
       document.getElementById('state4').innerHTML = new Date(link4.state_changed).toLocaleDateString();
     }).catch(function (error) {
       console.error(error);
-    })
+    }
     .then(function () {
     });
 }
